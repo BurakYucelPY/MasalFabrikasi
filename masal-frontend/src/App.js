@@ -55,6 +55,7 @@ function App() {
           <option value="CESARET">CESARET</option>
           <option value="EĞİTİCİ">EĞİTİCİ</option>
           <option value="KOMİK">KOMİK</option>
+          <option value="GİZEM">GİZEM</option>
         </select>
       </div>
 

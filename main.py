@@ -1,7 +1,7 @@
 from fonks.klasorden_resimleri_yukle import klasorden_resimleri_yukle
 from fonks.masal_yarat import masal_yarat
 
-MUMKUN_TEMALAR = ["MACERA", "DOSTLUK", "CESARET", "EĞİTİCİ", "KOMİK"]
+MUMKUN_TEMALAR = ["MACERA", "DOSTLUK", "CESARET", "EĞİTİCİ", "KOMİK", "GİZEM"]
 # ----------------
 
 
