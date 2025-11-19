@@ -10,8 +10,6 @@ if __name__ == "__main__":
     # DENEME AYARLARI
     SECİLEN_TEMA = "DOSTLUK" 
     
-    print("\n\n--- 4 AŞAMALI KİTAP ÜRETİM SİSTEMİ BAŞLIYOR ---")
-    
     # 1. Resimleri Klasörden Yükle
     resimler = klasorden_resimleri_yukle()
     

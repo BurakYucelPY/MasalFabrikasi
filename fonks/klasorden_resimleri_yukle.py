@@ -20,7 +20,6 @@ def klasorden_resimleri_yukle():
         if os.path.isfile(tam_yol) and dosya_adi.lower().endswith(gecerli_uzantilar):
             try:
                 resimler.append(PIL.Image.open(tam_yol))
-                print(f"-> {dosya_adi} yüklendi.")
             except Exception as e:
                 print(f"HATA: {dosya_adi} yüklenirken sorun oluştu: {e}")
 
