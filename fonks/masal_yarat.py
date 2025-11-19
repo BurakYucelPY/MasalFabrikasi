@@ -59,4 +59,4 @@ def masal_yarat(resim_listesi: list, tema: str):
     sonuc_metni = sonuc_response.text
     tum_masal += sonuc_metni
 
-    print(tum_masal)
+    return tum_masal

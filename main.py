@@ -14,4 +14,5 @@ if __name__ == "__main__":
     resimler = klasorden_resimleri_yukle()
     
     # 2. Masalı Yarat
-    masal_yarat(resimler, SECİLEN_TEMA)
+    masal = masal_yarat(resimler, SECİLEN_TEMA)
+    print(masal)
