@@ -1,0 +1,36 @@
+.hosgeldin {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  text-align: center;
+  padding: 20px;
+}
+
+.hosgeldin h1 {
+  font-size: 48px;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.hosgeldin p {
+  font-size: 20px;
+  margin-bottom: 40px;
+  color: #666;
+  max-width: 600px;
+}
+
+.hosgeldin button {
+  padding: 15px 40px;
+  font-size: 18px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.hosgeldin button:hover {
+  background-color: #0056b3;
+}

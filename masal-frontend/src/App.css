@@ -1,39 +1,9 @@
 .App {
-  max-width: 800px;
-  margin: 50px auto;
-  padding: 20px;
-  font-family: Arial, sans-serif;
+  min-height: 100vh;
 }
 
-h1 {
-  text-align: center;
-}
-
-div {
-  margin: 15px 0;
-}
-
-label {
-  font-weight: bold;
-  margin-right: 10px;
-}
-
-input, select {
-  padding: 5px;
-  font-size: 16px;
-}
-
-button {
-  padding: 10px 20px;
-  font-size: 16px;
-  background-color: #007bff;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-button:disabled {
-  background-color: #ccc;
-  cursor: not-allowed;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }

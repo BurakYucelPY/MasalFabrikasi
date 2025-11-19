@@ -1,0 +1,39 @@
+.tema-secimi {
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.tema-secimi h1 {
+  font-size: 36px;
+  margin-bottom: 40px;
+  color: #333;
+}
+
+.tema-kartlar {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.tema-kart {
+  background: #f8f9fa;
+  padding: 40px 20px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.3s;
+  border: 2px solid transparent;
+}
+
+.tema-kart:hover {
+  background: #007bff;
+  color: white;
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+.tema-kart h2 {
+  font-size: 24px;
+  margin: 0;
+}
