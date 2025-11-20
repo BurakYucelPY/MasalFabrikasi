@@ -30,7 +30,15 @@ function Hosgeldin({ onNext }) {
           </svg>
         </div>
         <p>Resimlerinizi yükleyin, bir tema seçin ve yapay zeka sizin için özel bir masal oluştursun!</p>
-        <button onClick={onNext}>Devam Et</button>
+        <button onClick={onNext} className="magic-button">
+          <span className="magic-button-content">
+            ✨ Masala Başla ✨
+          </span>
+          <span className="sparkle sparkle-1">✦</span>
+          <span className="sparkle sparkle-2">✦</span>
+          <span className="sparkle sparkle-3">✦</span>
+          <span className="sparkle sparkle-4">✦</span>
+        </button>
       </div>
     </div>
   );
