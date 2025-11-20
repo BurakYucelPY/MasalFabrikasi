@@ -12,42 +12,80 @@
   font-family: 'Comic Sans MS', 'Chalkboard SE', 'Comic Neue', sans-serif;
 }
 
+/* Arka planı hafif karartmak için katman */
+.hosgeldin::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
+  z-index: 1;
+}
+
 .overlay {
   background-color: transparent;
   padding: 20px;
-  padding-top: 150px;
+  padding-top: 50px;
   display: flex;
   flex-direction: column;
   align-items: center;
   box-shadow: none;
   width: 100%;
   max-width: 1400px;
+  position: relative;
+  z-index: 2;
 }
 
 .title-wrapper {
   width: 100%;
   max-width: 100%;
   margin-bottom: 40px;
-  animation: float 3s ease-in-out infinite;
   position: relative;
   z-index: 100;
 }
 
-.curved-text-svg {
-  width: 100%;
-  height: auto;
-  min-height: 200px;
-  overflow: visible;
-  display: block;
+.bouncy-title {
+  font-size: 80px;
+  font-weight: 900;
+  font-family: 'Comic Sans MS', 'Chalkboard SE', 'Comic Neue', sans-serif;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 5px;
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
 }
 
-.curved-text-svg text {
-  font-family: 'Comic Sans MS', 'Chalkboard SE', 'Comic Neue', sans-serif;
-  font-size: 70px;
-  font-weight: 900;
-  stroke: #000;
-  stroke-width: 3px;
-  paint-order: stroke;
+.bouncy-title span {
+  display: inline-block;
+  background: linear-gradient(45deg, 
+    #FF0000, #FF7F00, #FFFF00, #00FF00, #0000FF, #4B0082, #9400D3);
+  background-size: 200% 200%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke: 3px #000;
+  filter: drop-shadow(2px 2px 0px rgba(0,0,0,0.5));
+  animation: 
+    letterBounce 4s ease-in-out infinite,
+    colorShift 6s linear infinite;
+  animation-delay: calc(var(--i) * 0.1s);
+}
+
+.bouncy-title span:hover {
+  animation: 
+    letterBounce 2s ease-in-out infinite,
+    colorShift 3s linear infinite;
+  transform: scale(1.2);
+  cursor: pointer;
+}
+
+.curved-text-svg {
+  display: none;
 }
 
 .hosgeldin p {
@@ -63,6 +101,10 @@
     -1px 1px 0 #000,
     1px 1px 0 #000;
   animation: fadeIn 1.5s ease-out;
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
 }
 
 /* Sihirli Parıltılı Buton */
@@ -88,6 +130,10 @@
   margin-top: 30px;
   text-transform: uppercase;
   letter-spacing: 2px;
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
 }
 
 .magic-button:hover {
@@ -176,10 +222,25 @@
   }
 }
 
-@keyframes float {
-  0% { transform: translateY(0px); }
-  50% { transform: translateY(-20px); }
-  100% { transform: translateY(0px); }
+@keyframes letterBounce {
+  0%, 100% { 
+    transform: translateY(0) rotate(0deg) scale(1);
+  }
+  25% { 
+    transform: translateY(-20px) rotate(-10deg) scale(1.1);
+  }
+  50% { 
+    transform: translateY(-30px) rotate(0deg) scale(1.15);
+  }
+  75% { 
+    transform: translateY(-20px) rotate(10deg) scale(1.1);
+  }
+}
+
+@keyframes colorShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
 }
 
 @keyframes fadeIn {
