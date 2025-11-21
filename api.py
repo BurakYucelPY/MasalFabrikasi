@@ -30,10 +30,10 @@ async def masal_uret(
         pil_resim = PIL.Image.open(io.BytesIO(resim_bytes))
         pil_resimleri.append(pil_resim)
     
-    # Masalı üret (string olarak döner)
-    masal_metni = masal_yarat(pil_resimleri, tema)
+    # Masalı üret (başlık ve masal metni döner)
+    sonuc = masal_yarat(pil_resimleri, tema)
     
-    return {"masal": masal_metni}
+    return {"baslik": sonuc["baslik"], "masal": sonuc["masal"]}
 
 @app.get("/")
 def anasayfa():

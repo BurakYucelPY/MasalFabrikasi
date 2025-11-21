@@ -1,10 +1,10 @@
 import './MasalGoster.css';
 
-function MasalGoster({ masal }) {
+function MasalGoster({ baslik, masal }) {
   return (
     <div className="masal-goster">
       <div className="masal-icerik">
-        <h1>Masalın</h1>
+        <h1>{baslik || "Masalın"}</h1>
         {masal && (
           <div className="masal-metin">
             <p>{masal}</p>

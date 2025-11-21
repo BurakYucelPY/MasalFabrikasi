@@ -59,4 +59,28 @@ def masal_yarat(resim_listesi: list, tema: str):
     sonuc_metni = sonuc_response.text
     tum_masal += sonuc_metni
 
-    return tum_masal
+    # Masalı tamamladıktan SONRA başlık oluştur
+    baslik_prompt = f"""
+    Sen yaratıcı bir çocuk kitabı başlık uzmanısısın. Aşağıdaki masalı oku ve masalın ana temasını, 
+    kahramanlarını ve mesajını özetleyen, çocukların ilgisini çekecek, akılda kalıcı bir başlık yaz.
+    
+    KURALLAR:
+    - Başlık 3-6 kelime arasında olmalı
+    - Çocuklar için sihirli ve merak uyandırıcı olmalı
+    - Masalın ana karakterini veya olayını yansıtmalı
+    - Sade ve anlaşılır Türkçe kullan
+    - Sadece başlığı yaz, başka hiçbir şey yazma
+    - Tırnak işareti, nokta veya açıklama ekleme
+    
+    MASAL:
+    {tum_masal[:2000]}
+    
+    BAŞLIK:
+    """
+    baslik_response = model.generate_content(baslik_prompt)
+    masal_basligi = baslik_response.text.strip()
+    
+    # Gereksiz karakterleri temizle
+    masal_basligi = masal_basligi.replace('"', '').replace("'", '').replace(':', '').strip()
+
+    return {"baslik": masal_basligi, "masal": tum_masal}

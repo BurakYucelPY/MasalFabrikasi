@@ -45,7 +45,7 @@ function MasalOlustur({ tema, onMasalOlustur }) {
 
     try {
       const response = await axios.post('http://localhost:8000/masal-uret', formData);
-      onMasalOlustur(response.data.masal);
+      onMasalOlustur(response.data.baslik, response.data.masal);
     } catch (error) {
       alert('Hata: ' + error.message);
       setYukleniyor(false);

@@ -10,13 +10,15 @@ function App() {
   const [sayfa, setSayfa] = useState(1);
   const [secilenTema, setSecilenTema] = useState('');
   const [masal, setMasal] = useState('');
+  const [masalBasligi, setMasalBasligi] = useState('');
 
   const handleTemaSecimi = (tema) => {
     setSecilenTema(tema);
     setSayfa(3);
   };
 
-  const handleMasalOlustur = (yeniMasal) => {
+  const handleMasalOlustur = (baslik, yeniMasal) => {
+    setMasalBasligi(baslik);
     setMasal(yeniMasal);
     setSayfa(4);
   };
@@ -27,7 +29,7 @@ function App() {
       {sayfa === 1 && <Hosgeldin onNext={() => setSayfa(2)} />}
       {sayfa === 2 && <TemaSecimi onSelectTheme={handleTemaSecimi} />}
       {sayfa === 3 && <MasalOlustur tema={secilenTema} onMasalOlustur={handleMasalOlustur} />}
-      {sayfa === 4 && <MasalGoster masal={masal} />}
+      {sayfa === 4 && <MasalGoster baslik={masalBasligi} masal={masal} />}
     </div>
   );
 }
