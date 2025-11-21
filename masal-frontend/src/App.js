@@ -25,7 +25,7 @@ function App() {
 
   return (
     <div className="App">
-      <SplashCursor />
+      {sayfa !== 4 && <SplashCursor />}
       {sayfa === 1 && <Hosgeldin onNext={() => setSayfa(2)} />}
       {sayfa === 2 && <TemaSecimi onSelectTheme={handleTemaSecimi} />}
       {sayfa === 3 && <MasalOlustur tema={secilenTema} onMasalOlustur={handleMasalOlustur} />}
