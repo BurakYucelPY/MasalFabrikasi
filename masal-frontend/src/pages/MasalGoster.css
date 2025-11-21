@@ -1,33 +1,9 @@
-.masal-goster {
+.masal-goster-page {
   min-height: 100vh;
-  padding: 40px 20px;
   display: flex;
   align-items: center;
   justify-content: center;
-}
-
-.masal-icerik {
-  max-width: 800px;
-  width: 100%;
-}
-
-.masal-goster h1 {
-  text-align: center;
-  font-size: 48px;
-  margin-bottom: 40px;
-  color: #333;
-}
-
-.masal-metin {
-  background: white;
-  padding: 40px;
-  border-radius: 15px;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.2);
-}
-
-.masal-metin p {
-  font-size: 18px;
-  line-height: 1.8;
-  color: #333;
-  white-space: pre-wrap;
+  background: radial-gradient(circle at center, #e0f7fa 0%, #80deea 100%);
+  padding: 20px;
+  overflow: hidden;
 }
