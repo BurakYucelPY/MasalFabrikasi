@@ -1,6 +1,29 @@
 .tema-secimi {
   padding: 40px 20px;
   text-align: center;
+  min-height: 100vh;
+  background-image: url('../images/26983212_v677-ken-27-animalbadge.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  position: relative;
+}
+
+.tema-secimi::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.4);
+  z-index: 1;
+}
+
+.tema-secimi > * {
+  position: relative;
+  z-index: 2;
 }
 
 .tema-secimi h1 {
