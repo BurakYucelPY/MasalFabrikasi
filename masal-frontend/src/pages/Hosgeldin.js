@@ -1,7 +1,10 @@
+import { useNavigate } from 'react-router-dom';
 import './Hosgeldin.css';
 import backgroundImage from '../images/scene-with-young-children-playing-nature-outdoors.jpg';
 
-function Hosgeldin({ onNext }) {
+function Hosgeldin() {
+  const navigate = useNavigate();
+
   return (
     <div className="hosgeldin" style={{ backgroundImage: `url(${backgroundImage})` }}>
       <div className="overlay">
@@ -39,7 +42,7 @@ function Hosgeldin({ onNext }) {
           </h1>
         </div>
         <p>Resimlerinizi yükleyin, bir tema seçin ve yapay zeka sizin için özel bir masal oluştursun!</p>
-        <button onClick={onNext} className="magic-button">
+        <button onClick={() => navigate('/tema-secimi')} className="magic-button">
           <span className="magic-button-content">
             ✨ Masala Başla ✨
           </span>

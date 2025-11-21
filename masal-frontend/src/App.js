@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
 import Hosgeldin from './pages/Hosgeldin';
 import TemaSecimi from './pages/TemaSecimi';
 import MasalOlustur from './pages/MasalOlustur';
@@ -6,31 +7,48 @@ import MasalGoster from './pages/MasalGoster';
 import SplashCursor from './components/SplashCursor';
 import './App.css';
 
-function App() {
-  const [sayfa, setSayfa] = useState(1);
+function AppContent() {
+  const location = useLocation();
   const [secilenTema, setSecilenTema] = useState('');
   const [masal, setMasal] = useState('');
   const [masalBasligi, setMasalBasligi] = useState('');
 
-  const handleTemaSecimi = (tema) => {
-    setSecilenTema(tema);
-    setSayfa(3);
-  };
-
-  const handleMasalOlustur = (baslik, yeniMasal) => {
-    setMasalBasligi(baslik);
-    setMasal(yeniMasal);
-    setSayfa(4);
-  };
+  // SplashCursor sadece MasalGoster sayfasında gizli
+  const showSplash = location.pathname !== '/masal-goster';
 
   return (
     <div className="App">
-      {sayfa !== 4 && <SplashCursor />}
-      {sayfa === 1 && <Hosgeldin onNext={() => setSayfa(2)} />}
-      {sayfa === 2 && <TemaSecimi onSelectTheme={handleTemaSecimi} />}
-      {sayfa === 3 && <MasalOlustur tema={secilenTema} onMasalOlustur={handleMasalOlustur} />}
-      {sayfa === 4 && <MasalGoster baslik={masalBasligi} masal={masal} />}
+      {showSplash && <SplashCursor />}
+      <Routes>
+        <Route path="/" element={<Hosgeldin />} />
+        <Route 
+          path="/tema-secimi" 
+          element={<TemaSecimi setSecilenTema={setSecilenTema} />} 
+        />
+        <Route 
+          path="/masal-olustur" 
+          element={
+            <MasalOlustur 
+              tema={secilenTema} 
+              setMasalBasligi={setMasalBasligi} 
+              setMasal={setMasal} 
+            />
+          } 
+        />
+        <Route 
+          path="/masal-goster" 
+          element={<MasalGoster baslik={masalBasligi} masal={masal} />} 
+        />
+      </Routes>
     </div>
+  );
+}
+
+function App() {
+  return (
+    <Router>
+      <AppContent />
+    </Router>
   );
 }
 

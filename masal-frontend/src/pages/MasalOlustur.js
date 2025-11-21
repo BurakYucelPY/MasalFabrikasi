@@ -1,8 +1,10 @@
 import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import './MasalOlustur.css';
 
-function MasalOlustur({ tema, onMasalOlustur }) {
+function MasalOlustur({ tema, setMasalBasligi, setMasal }) {
+  const navigate = useNavigate();
   const [resimler, setResimler] = useState([]);
   const [yukleniyor, setYukleniyor] = useState(false);
   const [surukleniyor, setSurukleniyor] = useState(false);
@@ -45,9 +47,12 @@ function MasalOlustur({ tema, onMasalOlustur }) {
 
     try {
       const response = await axios.post('http://localhost:8000/masal-uret', formData);
-      onMasalOlustur(response.data.baslik, response.data.masal);
+      setMasalBasligi(response.data.baslik);
+      setMasal(response.data.masal);
+      navigate('/masal-goster');
     } catch (error) {
       alert('Hata: ' + error.message);
+    } finally {
       setYukleniyor(false);
     }
   };

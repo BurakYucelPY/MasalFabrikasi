@@ -1,6 +1,8 @@
+import { useNavigate } from 'react-router-dom';
 import './TemaSecimi.css';
 
-function TemaSecimi({ onSelectTheme }) {
+function TemaSecimi({ setSecilenTema }) {
+  const navigate = useNavigate();
   const themes = [
     { name: 'DOSTLUK', emoji: '🤝', color: 'pink' },
     { name: 'MACERA', emoji: '🗺️', color: 'orange' },
@@ -10,6 +12,11 @@ function TemaSecimi({ onSelectTheme }) {
     { name: 'GİZEM', emoji: '🔮', color: 'purple' }
   ];
 
+  const handleThemeSelect = (themeName) => {
+    setSecilenTema(themeName);
+    navigate('/masal-olustur');
+  };
+
   return (
     <div className="tema-secimi">
       <h1>Bir Tema Seçin</h1>
@@ -18,7 +25,7 @@ function TemaSecimi({ onSelectTheme }) {
           <div 
             key={theme.name} 
             className={`tema-kart tema-${theme.color}`} 
-            onClick={() => onSelectTheme(theme.name)}
+            onClick={() => handleThemeSelect(theme.name)}
           >
             <div className="tema-emoji">{theme.emoji}</div>
             <h2>{theme.name}</h2>
