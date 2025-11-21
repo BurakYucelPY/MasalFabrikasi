@@ -2,13 +2,30 @@ import { useState } from 'react';
 import axios from 'axios';
 import './MasalOlustur.css';
 
-function MasalOlustur({ tema }) {
+function MasalOlustur({ tema, onMasalOlustur }) {
   const [resimler, setResimler] = useState([]);
-  const [masal, setMasal] = useState('');
   const [yukleniyor, setYukleniyor] = useState(false);
+  const [surukleniyor, setSurukleniyor] = useState(false);
 
   const handleResimSec = (e) => {
     setResimler(Array.from(e.target.files));
+  };
+
+  const handleDragOver = (e) => {
+    e.preventDefault();
+    setSurukleniyor(true);
+  };
+
+  const handleDragLeave = (e) => {
+    e.preventDefault();
+    setSurukleniyor(false);
+  };
+
+  const handleDrop = (e) => {
+    e.preventDefault();
+    setSurukleniyor(false);
+    const files = Array.from(e.dataTransfer.files).filter(file => file.type.startsWith('image/'));
+    setResimler(files);
   };
 
   const handleMasalOlustur = async () => {
@@ -18,7 +35,6 @@ function MasalOlustur({ tema }) {
     }
 
     setYukleniyor(true);
-    setMasal('');
 
     const formData = new FormData();
     resimler.forEach(resim => {
@@ -28,10 +44,9 @@ function MasalOlustur({ tema }) {
 
     try {
       const response = await axios.post('http://localhost:8000/masal-uret', formData);
-      setMasal(response.data.masal);
+      onMasalOlustur(response.data.masal);
     } catch (error) {
       alert('Hata: ' + error.message);
-    } finally {
       setYukleniyor(false);
     }
   };
@@ -42,19 +57,35 @@ function MasalOlustur({ tema }) {
       
       <div className="yukle-bolum">
         <label>Resimlerinizi Seçin:</label>
-        <input type="file" multiple accept="image/*" onChange={handleResimSec} />
-        <p>{resimler.length} resim seçildi</p>
+        
+        <div 
+          className={`dosya-yukle-alan ${surukleniyor ? 'surukleniyor' : ''}`}
+          onDragOver={handleDragOver}
+          onDragLeave={handleDragLeave}
+          onDrop={handleDrop}
+        >
+          <div className="yukle-ikon">📷</div>
+          <p className="yukle-metin">Resimleri buraya sürükleyip bırakın</p>
+          <p className="veya-metin">veya</p>
+          <label htmlFor="file-input" className="dosya-sec-buton">
+            Dosya Seç
+          </label>
+          <input 
+            id="file-input"
+            type="file" 
+            multiple 
+            accept="image/*" 
+            onChange={handleResimSec}
+            style={{ display: 'none' }}
+          />
+        </div>
+
+        <p className="secilen-dosya">{resimler.length} resim seçildi</p>
+        
         <button onClick={handleMasalOlustur} disabled={yukleniyor}>
           {yukleniyor ? 'Masal Oluşturuluyor...' : 'Masal Oluştur'}
         </button>
       </div>
-
-      {masal && (
-        <div className="masal-sonuc">
-          <h2>Masalınız:</h2>
-          <p>{masal}</p>
-        </div>
-      )}
     </div>
   );
 }
