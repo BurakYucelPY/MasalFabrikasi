@@ -3,7 +3,10 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background: radial-gradient(circle at center, #e0f7fa 0%, #80deea 100%);
+  background-color: #e0f7fa; /* Fallback color */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   padding: 20px;
   overflow: hidden;
 }
