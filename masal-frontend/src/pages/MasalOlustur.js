@@ -8,7 +8,8 @@ function MasalOlustur({ tema, onMasalOlustur }) {
   const [surukleniyor, setSurukleniyor] = useState(false);
 
   const handleResimSec = (e) => {
-    setResimler(Array.from(e.target.files));
+    const yeniDosyalar = Array.from(e.target.files);
+    setResimler(prev => [...prev, ...yeniDosyalar]);
   };
 
   const handleDragOver = (e) => {
@@ -25,7 +26,7 @@ function MasalOlustur({ tema, onMasalOlustur }) {
     e.preventDefault();
     setSurukleniyor(false);
     const files = Array.from(e.dataTransfer.files).filter(file => file.type.startsWith('image/'));
-    setResimler(files);
+    setResimler(prev => [...prev, ...files]);
   };
 
   const handleMasalOlustur = async () => {
