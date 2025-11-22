@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
+import { HashRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
 import Hosgeldin from './pages/Hosgeldin';
 import TemaSecimi from './pages/TemaSecimi';
 import MasalOlustur from './pages/MasalOlustur';
