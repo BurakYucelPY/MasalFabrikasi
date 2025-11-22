@@ -32,6 +32,10 @@ function MasalOlustur({ tema, setMasalBasligi, setMasal }) {
     setResimler(prev => [...prev, ...files]);
   };
 
+  const handleResimSil = (index) => {
+    setResimler(prev => prev.filter((_, i) => i !== index));
+  };
+
   const handleMasalOlustur = async () => {
     if (resimler.length === 0) {
       alert('Lütfen en az 1 resim seçin!');
@@ -89,6 +93,27 @@ function MasalOlustur({ tema, setMasalBasligi, setMasal }) {
         </div>
 
         <p className="secilen-dosya">{resimler.length} resim seçildi</p>
+        
+        {resimler.length > 0 && (
+          <div className="resim-onizleme-container">
+            {resimler.map((resim, index) => (
+              <div key={index} className="onizleme-kart">
+                <img 
+                  src={URL.createObjectURL(resim)} 
+                  alt={`Seçilen ${index + 1}`} 
+                  className="onizleme-resim"
+                />
+                <button 
+                  className="sil-buton"
+                  onClick={() => handleResimSil(index)}
+                  title="Resmi Kaldır"
+                >
+                  ×
+                </button>
+              </div>
+            ))}
+          </div>
+        )}
         
         <button onClick={handleMasalOlustur} disabled={yukleniyor}>
           {yukleniyor ? 'Masal Oluşturuluyor...' : 'Masal Oluştur'}
