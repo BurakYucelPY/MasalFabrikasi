@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
+import LoadingSpinner from '../components/LoadingSpinner';
 import './MasalOlustur.css';
 
 function MasalOlustur({ tema, setMasalBasligi, setMasal }) {
@@ -59,6 +60,7 @@ function MasalOlustur({ tema, setMasalBasligi, setMasal }) {
 
   return (
     <div className="masal-olustur">
+      {yukleniyor && <LoadingSpinner />}
       <h1>Seçilen Tema: {tema}</h1>
       
       <div className="yukle-bolum">
