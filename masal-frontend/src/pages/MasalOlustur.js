@@ -51,7 +51,7 @@ function MasalOlustur({ tema, setMasalBasligi, setMasal }) {
     formData.append('tema', tema);
 
     try {
-      const response = await axios.post('http://localhost:8000/masal-uret', formData);
+      const response = await axios.post('https://masalfabrikasi.onrender.com/masal-uret', formData);
       setMasalBasligi(response.data.baslik);
       setMasal(response.data.masal);
       navigate('/masal-goster');
