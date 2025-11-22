@@ -52,22 +52,22 @@
   background: linear-gradient(135deg, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.1));
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
-  padding: 35px;
+  padding: 30px;
   border-radius: 30px;
   text-align: center;
   border: 2px solid rgba(255, 255, 255, 0.4);
   box-shadow: 
     0 8px 32px 0 rgba(31, 38, 135, 0.37),
     inset 0 -3px 10px rgba(255, 255, 255, 0.2);
-  max-width: 550px;
+  max-width: 480px;
   margin: 0 auto;
 }
 
 .yukle-bolum label {
   display: block;
-  font-size: 24px;
+  font-size: 20px;
   font-weight: 900;
-  margin-bottom: 30px;
+  margin-bottom: 25px;
   color: #fff;
   text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
   font-family: 'Comic Sans MS', 'Chalkboard SE', sans-serif;
@@ -185,7 +185,7 @@
 }
 
 .yukle-bolum button:hover:not(:disabled) {
-  transform: translateY(-3px) scale(1.05);
+  transform: translateY(-3px);
   box-shadow: 
     0 12px 30px rgba(40, 167, 69, 0.7),
     inset 0 -3px 10px rgba(255, 255, 255, 0.3);
