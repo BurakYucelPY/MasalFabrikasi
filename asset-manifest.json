@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/MasalFabrikasi/static/css/main.5379a788.css",
-    "main.js": "/MasalFabrikasi/static/js/main.a4a7c1c6.js",
+    "main.css": "/MasalFabrikasi/static/css/main.df4a23e0.css",
+    "main.js": "/MasalFabrikasi/static/js/main.889144e5.js",
     "static/media/scene-with-young-children-playing-nature-outdoors.jpg": "/MasalFabrikasi/static/media/scene-with-young-children-playing-nature-outdoors.e2e70f09012d4c3ebbe7.jpg",
     "static/media/26983212_v677-ken-27-animalbadge.jpg": "/MasalFabrikasi/static/media/26983212_v677-ken-27-animalbadge.2c6bb1fd43ff66e392a3.jpg",
     "static/media/paper-cut-children-read-book.jpg": "/MasalFabrikasi/static/media/paper-cut-children-read-book.695b76ce3d8d65d9d12e.jpg",
     "static/media/halloween-ghost-3d-illustration.jpg": "/MasalFabrikasi/static/media/halloween-ghost-3d-illustration.4b04b19aa298bdb9c172.jpg",
     "index.html": "/MasalFabrikasi/index.html",
-    "main.5379a788.css.map": "/MasalFabrikasi/static/css/main.5379a788.css.map",
-    "main.a4a7c1c6.js.map": "/MasalFabrikasi/static/js/main.a4a7c1c6.js.map"
+    "main.df4a23e0.css.map": "/MasalFabrikasi/static/css/main.df4a23e0.css.map",
+    "main.889144e5.js.map": "/MasalFabrikasi/static/js/main.889144e5.js.map"
   },
   "entrypoints": [
-    "static/css/main.5379a788.css",
-    "static/js/main.a4a7c1c6.js"
+    "static/css/main.df4a23e0.css",
+    "static/js/main.889144e5.js"
   ]
 }
