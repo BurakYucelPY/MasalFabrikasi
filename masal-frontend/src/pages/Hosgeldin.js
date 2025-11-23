@@ -1,9 +1,52 @@
+import { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import './Hosgeldin.css';
+import LoadingSpinner from '../components/LoadingSpinner';
 import backgroundImage from '../images/scene-with-young-children-playing-nature-outdoors.jpg';
+
+// Tüm arka plan resimlerini import et
+import bg1 from '../images/scene-with-young-children-playing-nature-outdoors.jpg';
+import bg2 from '../images/26983212_v677-ken-27-animalbadge.jpg';
+import bg3 from '../images/halloween-ghost-3d-illustration.jpg';
+import bg4 from '../images/paper-cut-children-read-book.jpg';
+
+// Diğer sayfaların CSS'lerini preload et
+import '../pages/TemaSecimi.css';
+import '../pages/MasalOlustur.css';
 
 function Hosgeldin() {
   const navigate = useNavigate();
+  const [yukleniyor, setYukleniyor] = useState(true);
+
+  useEffect(() => {
+    // Tüm resimleri preload et
+    const imagesToPreload = [bg1, bg2, bg3, bg4];
+    let loadedCount = 0;
+    const totalAssets = imagesToPreload.length;
+
+    const checkComplete = () => {
+      loadedCount++;
+      if (loadedCount === totalAssets) {
+        // Tüm assetler yüklendi, loading'i kapat
+        setTimeout(() => setYukleniyor(false), 300);
+      }
+    };
+
+    imagesToPreload.forEach((src) => {
+      const img = new Image();
+      img.onload = checkComplete;
+      img.onerror = checkComplete;
+      img.src = src;
+    });
+  }, []);
+
+  if (yukleniyor) {
+    return (
+      <div style={{ position: 'relative', width: '100vw', height: '100vh', backgroundColor: '#1a1a2e' }}>
+        <LoadingSpinner loadingText="Masal Fabrikası Hazırlanıyor..." />
+      </div>
+    );
+  }
 
   return (
     <div className="hosgeldin" style={{ backgroundImage: `url(${backgroundImage})` }}>
