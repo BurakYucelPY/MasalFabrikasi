@@ -1,8 +1,9 @@
 .masal-olustur {
   margin: 0;
   padding: 40px 20px;
-  height: 100vh;
-  width: 100vw;
+  min-height: 100vh;
+  width: 100%;
+  max-width: 100vw;
   background-image: url('../images/halloween-ghost-3d-illustration.jpg');
   background-size: cover;
   background-position: center;
@@ -12,8 +13,10 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  overflow: hidden;
+  justify-content: flex-start;
+  overflow-y: auto;
+  overflow-x: hidden;
+  box-sizing: border-box;
 }
 
 .masal-olustur::before {
@@ -60,8 +63,9 @@
     0 8px 32px 0 rgba(31, 38, 135, 0.37),
     inset 0 -3px 10px rgba(255, 255, 255, 0.2);
   max-width: 500px;
-  width: 100%;
+  width: calc(100% - 40px);
   margin: 0 auto;
+  box-sizing: border-box;
 }
 
 .yukle-bolum label {
