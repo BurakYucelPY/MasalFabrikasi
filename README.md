@@ -193,9 +193,8 @@ Oluşturulan masal, `react-pageflip` kütüphanesi ile dijital kitap formatında
 2. **Macera** temasını seçer.
 3. Kendi fotoğrafını ve köpeğinin resmini yükler.
 4. **"Masal Oluştur"** butonuna basar.
-5. Gökkuşağı animasyonlu yükleme ekranı görünür.
-6. 30-60 saniye içinde, çocuğun ve köpeğinin kahramanı olduğu özgün bir macera masalı oluşur.
-7. Masalı dijital kitap formatında sayfa sayfa okur.
+5. 30-60 saniye içinde, çocuğun ve köpeğinin kahramanı olduğu özgün bir macera masalı oluşur.
+6. Masalı dijital kitap formatında sayfa sayfa okur.
 
 ## ⚙️ Önemli Ayarlar
 
