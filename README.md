@@ -1,11 +1,17 @@
 # 📚 Masal Fabrikası — AI Destekli Kişiselleştirilmiş Çocuk Masalları
 
-<p align="left">
+<p align="center">
   <a href="https://burakyucelpy.github.io/MasalFabrikasi">
-    <img src="https://img.shields.io/badge/%F0%9F%8C%90%20Canl%C4%B1%20Demo-GitHub%20Pages-blue?labelColor=2b3137&logo=github&logoColor=white" alt="Live Demo" />
+    <img src="https://img.shields.io/badge/🌍%20Canlı%20Demo-Hemen%20Dene-blue?style=for-the-badge&logo=github&logoColor=white" alt="Live Demo" />
   </a>
-  <a href="https://masalfabrikasi.onrender.com">
-    <img src="https://img.shields.io/badge/%F0%9F%9A%80%20Backend-Render-46e3b7?labelColor=2b3137&logo=render&logoColor=white" alt="Backend" />
+  <a href="https://react.dev/">
+    <img src="https://img.shields.io/badge/Frontend-React-61DAFB?style=for-the-badge&logo=react&logoColor=black" alt="React" />
+  </a>
+  <a href="https://fastapi.tiangolo.com/">
+    <img src="https://img.shields.io/badge/Backend-FastAPI-009688?style=for-the-badge&logo=fastapi&logoColor=white" alt="FastAPI" />
+  </a>
+  <a href="https://deepmind.google/technologies/gemini/">
+    <img src="https://img.shields.io/badge/AI-Gemini%202.5%20Flash-8E75B2?style=for-the-badge&logo=google&logoColor=white" alt="Gemini AI" />
   </a>
 </p>
 
@@ -27,42 +33,41 @@
 
 ## 🌐 Canlı Demo
 
-Projeyi tarayıcıdan deneyin: **https://burakyucelpy.github.io/MasalFabrikasi**
+Projeyi tarayıcıdan deneyin: **[https://burakyucelpy.github.io/MasalFabrikasi](https://burakyucelpy.github.io/MasalFabrikasi)**
 
 ## 🖼️ Ekran Görüntüleri
 
+### 1. Başlangıç ve Tema Seçimi
 <p align="center">
-  <img src="imagesReadMe/Hosgeldin.png" alt="Hoşgeldin Sayfası" width="85%"><br/>
-  <em>Hoşgeldin Sayfası</em>
+  <img src="imagesReadMe/Hosgeldin.png" alt="Hoşgeldin Sayfası" width="48%" style="border-radius: 10px; margin-right: 10px;">
+  <img src="imagesReadMe/TemaSecimi.png" alt="Tema Seçimi" width="48%" style="border-radius: 10px;">
+  <br/>
+  <em>Hoşgeldin Sayfası ve Tema Seçimi Ekranı</em>
 </p>
 
+### 2. Masal Oluşturma
 <p align="center">
-  <img src="imagesReadMe/TemaSecimi.png" alt="Tema Seçimi" width="85%"><br/>
-  <em>Tema Seçimi Ekranı</em>
-</p>
-
-<p align="center">
-  <img src="imagesReadMe/MasalOlustur.png" alt="Masal Oluşturma" width="85%"><br/>
+  <img src="imagesReadMe/MasalOlustur.png" alt="Masal Oluşturma" width="85%" style="border-radius: 10px;"><br/>
   <em>Masal Oluşturma Sayfası</em>
 </p>
 
+### 3. Yükleme Ekranı
 <p align="center">
-  <img src="imagesReadMe/YuklemeEkraniSS.png" alt="Yükleme Ekranı" width="85%"><br/>
+  <img src="imagesReadMe/YuklemeEkraniSS.png" alt="Yükleme Ekranı" width="85%" style="border-radius: 10px;"><br/>
   <em>Yükleme Animasyonu</em>
 </p>
 
+### 4. Masal Kitabı
 <p align="center">
-  <img src="imagesReadMe/MasalKapagi.png" alt="Masal Kapağı" width="85%"><br/>
-  <em>Dijital Kitap Kapağı</em>
+  <img src="imagesReadMe/MasalKapagi.png" alt="Masal Kapağı" width="48%" style="border-radius: 10px; margin-right: 10px;">
+  <img src="imagesReadMe/MasalKitabi.png" alt="Masal İçeriği" width="48%" style="border-radius: 10px;">
+  <br/>
+  <em>Dijital Kitap Kapağı ve İçeriği</em>
 </p>
 
+### 5. Masal Sonu
 <p align="center">
-  <img src="imagesReadMe/MasalKitabi.png" alt="Masal İçeriği" width="85%"><br/>
-  <em>Dijital Kitap İçeriği</em>
-</p>
-
-<p align="center">
-  <img src="imagesReadMe/MasalSonu.png" alt="Masal Sonu" width="85%"><br/>
+  <img src="imagesReadMe/MasalSonu.png" alt="Masal Sonu" width="85%" style="border-radius: 10px;"><br/>
   <em>Dijital Kitap Son Sayfası</em>
 </p>
 
@@ -246,5 +251,6 @@ Oluşturulan masal, `react-pageflip` kütüphanesi ile dijital kitap formatında
 Bu proje eğitim amaçlıdır ve açık kaynaklıdır. Kendi projelerinizde kullanabilirsiniz.
 
 ---
-
-**Geliştirildi**: Burak Yücel
+<p align="center">
+  Made with ❤️ by <a href="https://github.com/BurakYucelPY">Burak Yücel</a>
+</p>
