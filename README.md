@@ -37,35 +37,36 @@ Projeyi tarayıcıdan deneyin: **[https://burakyucelpy.github.io/MasalFabrikasi]
 
 ## 🖼️ Ekran Görüntüleri
 
-### 1. Başlangıç ve Tema Seçimi
 <p align="center">
-  <img src="imagesReadMe/Hosgeldin.png" alt="Hoşgeldin Sayfası" width="48%" style="border-radius: 10px; margin-right: 10px;">
-  <img src="imagesReadMe/TemaSecimi.png" alt="Tema Seçimi" width="48%" style="border-radius: 10px;">
-  <br/>
-  <em>Hoşgeldin Sayfası ve Tema Seçimi Ekranı</em>
+  <img src="imagesReadMe/Hosgeldin.png" alt="Hoşgeldin Sayfası" width="85%" style="border-radius: 10px;"><br/>
+  <em>Hoşgeldin Sayfası</em>
 </p>
 
-### 2. Masal Oluşturma
+<p align="center">
+  <img src="imagesReadMe/TemaSecimi.png" alt="Tema Seçimi" width="85%" style="border-radius: 10px;"><br/>
+  <em>Tema Seçimi Ekranı</em>
+</p>
+
 <p align="center">
   <img src="imagesReadMe/MasalOlustur.png" alt="Masal Oluşturma" width="85%" style="border-radius: 10px;"><br/>
   <em>Masal Oluşturma Sayfası</em>
 </p>
 
-### 3. Yükleme Ekranı
 <p align="center">
   <img src="imagesReadMe/YuklemeEkraniSS.png" alt="Yükleme Ekranı" width="85%" style="border-radius: 10px;"><br/>
   <em>Yükleme Animasyonu</em>
 </p>
 
-### 4. Masal Kitabı
 <p align="center">
-  <img src="imagesReadMe/MasalKapagi.png" alt="Masal Kapağı" width="48%" style="border-radius: 10px; margin-right: 10px;">
-  <img src="imagesReadMe/MasalKitabi.png" alt="Masal İçeriği" width="48%" style="border-radius: 10px;">
-  <br/>
-  <em>Dijital Kitap Kapağı ve İçeriği</em>
+  <img src="imagesReadMe/MasalKapagi.png" alt="Masal Kapağı" width="85%" style="border-radius: 10px;"><br/>
+  <em>Dijital Kitap Kapağı</em>
 </p>
 
-### 5. Masal Sonu
+<p align="center">
+  <img src="imagesReadMe/MasalKitabi.png" alt="Masal İçeriği" width="85%" style="border-radius: 10px;"><br/>
+  <em>Dijital Kitap İçeriği</em>
+</p>
+
 <p align="center">
   <img src="imagesReadMe/MasalSonu.png" alt="Masal Sonu" width="85%" style="border-radius: 10px;"><br/>
   <em>Dijital Kitap Son Sayfası</em>
