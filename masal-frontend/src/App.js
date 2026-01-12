@@ -1,5 +1,6 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { HashRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
+import axios from 'axios';
 import Hosgeldin from './pages/Hosgeldin';
 import TemaSecimi from './pages/TemaSecimi';
 import MasalOlustur from './pages/MasalOlustur';
@@ -45,6 +46,19 @@ function AppContent() {
 }
 
 function App() {
+  // Backend sunucusunu uyandırmak için wake-up call
+  useEffect(() => {
+    const wakeUpServer = async () => {
+      try {
+        await axios.get('https://masalfabrikasi.onrender.com/');
+        console.log('✅ Backend sunucusu uyandırıldı!');
+      } catch (error) {
+        console.log('⏳ Backend sunucusu uyanıyor, lütfen bekleyin...');
+      }
+    };
+    wakeUpServer();
+  }, []);
+
   return (
     <Router>
       <AppContent />
